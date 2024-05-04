@@ -3,6 +3,8 @@ import Input from "@/components/input";
 import Label from "@/components/label";
 import PageHeader from "@/components/page-header";
 import Select from "@/components/select";
+import Seperator from "@/components/seperator";
+import Skeleton from "@/components/skeleton";
 import TransactionItem from "@/components/transaction-item";
 import TransactionSummaryItem from "@/components/transaction-summary-item";
 import Trend from "@/components/trend";
@@ -15,14 +17,14 @@ export default function Playground() {
       <div>
         <h2 className="mb-4 text-lg font-mono">PageHeader</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div>
         <PageHeader className="" />
       </div>
       <div>
         <h2 className="mb-4 text-lg font-mono">Trend</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div className="flex space-x-4">
         <Trend type="Income" amount={1000} prevAmount={500} />
         <Trend type="Expense" amount={500} prevAmount={300} />
@@ -32,7 +34,7 @@ export default function Playground() {
       <div>
         <h2 className="mb-4 text-lg font-mono">TransactionItem</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div className="space-y-4">
         <TransactionItem
           type="Income"
@@ -62,7 +64,7 @@ export default function Playground() {
       <div>
         <h2 className="mb-4 text-lg font-mono">TransactionSummaryItem</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div>
         <TransactionSummaryItem date="2021-09-01" amount={1000} />
         <TransactionItem
@@ -94,7 +96,7 @@ export default function Playground() {
       <div>
         <h2 className="mb-4 text-lg font-mono">Button</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div className="space-x-4">
         <Button>Hello</Button>
         <Button variant="outline">Hello</Button>
@@ -107,7 +109,7 @@ export default function Playground() {
       <div>
         <h2 className="mb-4 text-lg font-mono">Forms</h2>
       </div>
-      <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+      <Seperator />
       <div className="grid grid-cols-2 gap-4">
         <div>
           <Label className="mb-1">Your name</Label>
@@ -128,6 +130,22 @@ export default function Playground() {
           <Label className="ml-2" htmlFor="terms">
             Accept terms
           </Label>
+        </div>
+      </div>
+      <div>
+        <h2 className="mb-4 text-lg font-mono">Loading Skeleton</h2>
+      </div>
+      <Seperator />
+      <div className="space-y-8">
+        <div className="flex space-x-4">
+          <Skeleton className="" />
+          <Skeleton className="" />
+          <Skeleton className="" />
+        </div>
+        <div className="space-y-4">
+          <Skeleton className="" />
+          <Skeleton className="" />
+          <Skeleton className="" />
         </div>
       </div>
     </main>
